@@ -1,8 +1,6 @@
 ---
 slug: generating-narratives
 title: "Generating Narratives: Writing Coherent Stories with LLMs"
-subtitle: Writing coherent stories with LLMs
-tags: [promptx, papers, ai, prompt-engineering]
 ---
 
 ![Cover](./cover.png)

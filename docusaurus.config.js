@@ -18,7 +18,7 @@ const config = {
   url: 'https://layterz.github.io',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/',
+  baseUrl: '/posts/',
 
 
   // GitHub pages deployment config.
