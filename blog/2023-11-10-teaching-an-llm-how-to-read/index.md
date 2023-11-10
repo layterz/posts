@@ -46,11 +46,11 @@ assert 'Paris' in output
 
 ## Storing quotes
 
-I'm using the paper [DAIL](/). It uses an ensemble approach to boost the performance of prompting generative models.
+I'm using the paper [DAIL: Data Augmentation for In-Context Learning via Self-Paraphrase](https://arxiv.org/abs/2311.03319). It uses an ensemble approach to boost the performance of prompting generative models.
 
-Let's start by simply storing each sentence from the paper as a quote. When you store something in `promptx` it creates an embedding, which will allow us to query the quotes to augment question answering and other tasks.
+Let's start by simply storing each sentence from the paper as a quote. When you store something in **promptx** it creates an embedding, which will allow us to query the quotes to augment question answering and other tasks.
 
-First, we need to define `Quote` and `Docuement` entities. The `Entity` class is a thin wrapper on top of `pydantic.BaseModel`, which allows it to be stored as an embedding.
+First, we need to define `Quote` and `Document` entities. The `Entity` class is a thin wrapper on top of `pydantic.BaseModel`, which allows it to be stored as an embedding.
 
 ```python
 from promptx import Entity
@@ -103,7 +103,7 @@ quotes = quotes[quotes['text'].str.len() > 25]
 
 ## Generating thoughts
 
-Next, let's consider what we do when we read something like a paper. We don't just remember quotes, we also have thoughts and ideas. We can do the same thing with `promptx` by defining a `Thought` entity and crafting prompts to illicit interesting thoughts.
+Next, let's consider what we do when we read something like a paper. We don't just remember quotes, we also have thoughts and ideas. We can do the same thing with **promptx** by defining a `Thought` entity and crafting prompts to illicit interesting thoughts.
 
 ```python
 from enum import Enum
@@ -126,7 +126,7 @@ class Thought(Entity):
 
 Above, we define a `Thought` entity, but this time we're using an `enum` which will restrict the allowed values for `thought_type`.
 
-Now, we can use this to generate thoughts while we're reading the paper. By setting `output=[Thought]` we're telling `promptx` to return a list of `Thought` objects instead of the default string output.
+Now, we can use this to generate thoughts while we're reading the paper. By setting `output=[Thought]` we're telling **promptx** to return a list of `Thought` objects instead of the default string output.
 
 ```python
 from promptx import prompt
