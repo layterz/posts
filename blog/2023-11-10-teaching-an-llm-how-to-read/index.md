@@ -103,7 +103,7 @@ quotes = quotes[quotes['text'].str.len() > 25]
 
 ## Generating thoughts
 
-Next, let's consider what we do when we read something like a paper. We don't just remember quotes, we also have thoughts and ideas. We can do the same thing with **promptx** by defining a `Thought` entity and crafting prompts to illicit interesting thoughts.
+Next, let's consider what we do when we read something like a paper. We don't just remember quotes, we also have thoughts and ideas. We can do the same thing with **promptx** by defining a `Thought` entity and crafting prompts to elicit interesting thoughts.
 
 ```python
 from enum import Enum
